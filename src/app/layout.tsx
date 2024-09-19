@@ -1,17 +1,16 @@
-import type { Metadata } from "next";
-import localFont from "next/font/local";
-import "./globals.css";
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+import 'bootstrap/dist/css/bootstrap.css';
+
+import 'aos/dist/aos.css';
+
+import type { Metadata } from "next";
+import "./globals.css";
+import "./variables.css";
+import { EB_Garamond } from "next/font/google";
+import Header from '@/components/Header';
+
+const ebGaramond = EB_Garamond({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,7 +24,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={ebGaramond.className}>
+        <Header />
         {children}
       </body>
     </html>

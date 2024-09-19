@@ -9,16 +9,23 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "aos": "^2.3.4",
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
+    "dotenv": "^16.4.5",
+    "mongoose": "^8.6.3",
+    "next": "14.2.12",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.12"
+    "swiper": "^11.1.14"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@types/aos": "^3.0.7",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
-    "eslint-config-next": "14.2.12"
+    "eslint-config-next": "14.2.12",
+    "typescript": "^5"
   }
 }
