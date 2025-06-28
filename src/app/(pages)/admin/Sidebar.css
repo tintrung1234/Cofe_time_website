@@ -1,0 +1,35 @@
+.side-bar {
+    background-color: #705C53;
+    color: white;
+    width: 15%;
+}
+
+.btn-selection:hover {
+    background-color: #a99992 !important;
+}
+
+hr {
+    margin: 5px;
+}
+
+.side-bar i {
+    font-size: 50px;
+    margin-right: 10px;
+}
+
+.select-option {
+    padding: 5px;
+    border-radius: 2px;
+    transition: background-color 0.3s;
+}
+
+.select-option:hover {
+    min-width: 100% !important;
+    background-color: #a99992;
+}
+
+@media (max-width: 800px) {
+    .flexOnMobile {
+        flex-direction: column !important;
+    }
+}

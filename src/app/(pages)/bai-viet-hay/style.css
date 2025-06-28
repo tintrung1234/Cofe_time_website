@@ -1,0 +1,25 @@
+.button-group {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 9px;
+    display: flex !important;
+    align-items: center;
+}
+
+.button-group .btn {
+    color: black;
+    background-color: white;
+    padding: 3px;
+    border: solid 1px black;
+    cursor: pointer;
+}
+
+.button-group span {
+    margin: 0 10px 0 10px;
+}
+
+.btn-number {
+    padding: 3px 9px !important;
+    margin: 2px;
+}

@@ -1,0 +1,17 @@
+insert into category(id, category_name)
+values
+(1, 'Âm nhạc'),
+(2, 'Giải trí'),
+(3, 'Nghệ thuật'),
+(4, 'Khoa học'),
+(5, 'Văn hóa'),
+(6, 'Giáo dục'),
+(7, 'Gia đình'),
+(8, 'Thú cưng'),
+(9, 'Lối sống'),
+(10, 'Mẹo vặt'),
+(11, 'Công nghệ');
+
+update users
+set password = '$2b$10$E9p0yWzZxD1F5vynGg0FgeZmVjFmy4YWUXYBRBwj.fNZfjHkmic6a'
+where id = 1

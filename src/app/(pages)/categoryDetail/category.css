@@ -1,0 +1,63 @@
+.category-title {
+    margin: 2% 0 0 5%;
+    font-weight: bold;
+}
+
+.horizol-title {
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+.editText {
+    font-size: 22px;
+    margin-top: 0.1vh !important;
+    font-weight: bold;
+}
+
+.text-box {
+    display: flex !important;
+    align-items: flex-start;
+    height: 100%;
+    max-width: 50%;
+}
+
+.text-box2 {
+    display: flex !important;
+    align-items: flex-start;
+    height: 100%;
+    max-width: 50%;
+    flex-direction: column;
+    min-width: 80%;
+}
+
+.font-size-read-more {
+    font-size: 20px;
+}
+
+.button-group {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 9px;
+    display: flex !important;
+    align-items: center;
+}
+
+.button-group .btn {
+    color: black;
+    background-color: white;
+    padding: 3px;
+    border: solid 1px black;
+    cursor: pointer;
+}
+
+.button-group span {
+    margin: 0 10px 0 10px;
+}
+
+.btn-number {
+    padding: 3px 9px !important;
+    margin: 2px;
+}

@@ -1,0 +1,191 @@
+:root {
+  --background: #F5F7F8;
+  --foreground: #171717;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  background-color: white;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  color: black;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+.form-control:focus {
+  color: var(--bs-body-color);
+  background-color: var(--bs-body-bg);
+  border-color: #cadcf0;
+  outline: 0;
+  box-shadow: 0 0 0 .1rem rgba(157, 168, 183, 0.815);
+}
+
+
+/*--------------------------------- redesign bootstrap--------------------------------- */
+.btn-outline-success {
+  --bs-btn-color: #627d70;
+  --bs-btn-border-color: #95ada2;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #95ada2;
+  --bs-btn-hover-border-color: #95ada2;
+  --bs-btn-focus-shadow-rgb: 25, 135, 84;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #95ada2;
+  --bs-btn-active-border-color: #95ada2;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #95ada2;
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: #95ada2;
+  --bs-gradient: none;
+}
+
+.btn-secondary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: rgb(215, 109, 48);
+  --bs-btn-border-color: rgb(215, 109, 48);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: rgb(225, 59, 53);
+  --bs-btn-hover-border-color: rgb(225, 59, 53);
+  --bs-btn-focus-shadow-rgb: 130, 138, 145;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: rgb(225, 59, 53);
+  --bs-btn-active-border-color: #51585e;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(33, 29, 29, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: rgb(215, 109, 48);
+  --bs-btn-disabled-border-color: rgb(215, 109, 48);
+}
+
+.dropdown-toggle {
+  padding-left: 0;
+}
+
+.w-90 {
+  max-width: 90%;
+}
+
+.w-85 {
+  max-width: 85%;
+}
+
+.setPadding {
+  padding: 0 20%;
+}
+
+.setPaddingCategory {
+  padding: 0 5%;
+}
+
+.horizol {
+  width: 60%;
+  margin: 5px 0 10% 20%;
+}
+
+.brief:hover {
+  color: orange;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.cursor:hover {
+  cursor: pointer;
+}
+
+.middleFontSize {
+  font-size: 25px
+}
+
+.category-title {
+  margin: 2% 0 0 5%;
+}
+
+.paddingPicPet {
+  padding: 0 0 0 5%;
+}
+
+.demoQuangCao {
+  background-color: gray;
+  color: white;
+  height: 250px;
+  text-align: center;
+}
+
+
+.button-custom {
+  color: rgb(129, 129, 129);
+  text-decoration: none;
+  font-size: 16px;
+  border: none;
+  background: none;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.button-custom::before {
+  margin-left: auto;
+}
+
+.button-custom::after,
+.button-custom::before {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: orange;
+  display: block;
+  transition: 0.5s;
+}
+
+.button-custom:hover::after,
+.button-custom:hover::before {
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .categoryMobile>.sub-menu {
+    min-width: 300px !important;
+  }
+
+  .categoryMobile img {
+    display: none;
+  }
+}

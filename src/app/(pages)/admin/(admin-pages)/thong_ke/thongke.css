@@ -1,0 +1,42 @@
+.border_custom {
+    border: 2px solid rgb(179, 179, 179);
+    border-radius: 20px;
+}
+
+.number-display {
+    font-size: 44px;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.text-edit>p,
+.text-edit>h4 {
+    margin-bottom: 0;
+    margin-left: 10px;
+    margin-top: 0;
+}
+
+.set-height {
+    height: 152px;
+}
+
+.bi-icon {
+    font-size: 40px;
+}
+
+.set-height-chart {
+    height: 300px;
+}
+
+@media (max-width: 800px) {
+    .flexOnMobile {
+        flex-direction: column;
+    }
+
+    .column-mobile {
+        width: 100% !important;
+    }
+}
