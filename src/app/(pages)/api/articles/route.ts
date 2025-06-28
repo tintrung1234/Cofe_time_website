@@ -13,6 +13,7 @@ type Article = {
     image: string;
     views: number;
     category_name: string;
+    price: number;
 };
 
 export async function GET(req: NextRequest) {
@@ -30,16 +31,16 @@ export async function GET(req: NextRequest) {
         let values: any[] = [];
 
         if (type === "popular") {
-            query = `SELECT articleid, title, summary, image, views FROM article ORDER BY views DESC LIMIT 2`;
+            query = `SELECT articleid, title, summary, image, views, price FROM article ORDER BY views DESC LIMIT 2`;
         } else if (type === "highlight") {
-            query = `SELECT articleid, title, summary, image, views FROM article ORDER BY views DESC LIMIT 1 OFFSET 1`;
+            query = `SELECT articleid, title, summary, image, views, price FROM article ORDER BY views DESC LIMIT 1 OFFSET 1`;
         } else if (type === "recent") {
-            query = `SELECT articleid, title, summary, image FROM article ORDER BY articleid DESC LIMIT $1`;
+            query = `SELECT articleid, title, summary, image, views, price FROM article ORDER BY articleid DESC LIMIT $1`;
             values = [limit];
         } else if (type === "highlightCategory") {
             const limit = parseInt(searchParams.get('limit') || '1', 10);
             const OFFSET = parseInt(searchParams.get('offset') || '0', 10);
-            query = `SELECT articleid, title, summary, image, views, category FROM article WHERE category = $1 ORDER BY views DESC LIMIT $2 OFFSET $3`;
+            query = `SELECT articleid, title, summary, image, views, category, price FROM article WHERE category = $1 ORDER BY views DESC LIMIT $2 OFFSET $3`;
             values = [category, limit, OFFSET];
         } else if (category) {
             if (limit > 100) {
@@ -62,7 +63,7 @@ export async function GET(req: NextRequest) {
             } else {
                 return NextResponse.json({ message: "Category not found" }, { status: 404 });
             }
-        } else if (all) {
+        } else if (all == 'true') {
             if (limit > 100) {
                 return NextResponse.json({ message: "Limit exceeds maximum allowed value of 100." }, { status: 400 });
             }
@@ -70,7 +71,7 @@ export async function GET(req: NextRequest) {
             const { rows: totalRows } = await pool.query(totalQuery);
             const totalCount = parseInt(totalRows[0].count, 10);
             const totalPages = Math.ceil(totalCount / limit);
-            query = `SELECT articleid, title, summary, image, views FROM article LIMIT $1 OFFSET $2`;
+            query = `SELECT articleid, title, summary, image, views, price FROM article LIMIT $1 OFFSET $2`;
             values = [limit, offset];
             const { rows: results } = await pool.query<Article>(query, values);
             return NextResponse.json({ results, totalPages, currentPage: page, totalCount }, { status: 200 });

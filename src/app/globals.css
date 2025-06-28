@@ -189,3 +189,18 @@ a {
     display: none;
   }
 }
+
+.article-price {
+  color: #dc3545; /* Bootstrap's red */
+  font-weight: 600;
+  font-size: 1rem;
+  margin-top: 4px;
+}
+
+.line-clamp-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* number of lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

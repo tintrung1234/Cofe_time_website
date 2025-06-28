@@ -101,8 +101,8 @@ export default function Dashboard() {
                                         sizes="100vw"
                                         style={{ width: '90%', height: 'auto' }}
                                     />
-                                    <div className="brief d-flex flex-column setPaddingCategory">
-                                        <h4 className="title mt-3 mt-1">{_article.title}</h4>
+                                    <div className="brief d-flex flex-column setPaddingCategory block w-100 setPaddingCategory ">
+                                        <h4 className="line-clamp-1 text-muted title mt-3 mt-1">{_article.title}</h4>
                                     </div>
                                 </Link>
                                 <div className="view-display">

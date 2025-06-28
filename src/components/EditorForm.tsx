@@ -18,12 +18,14 @@ export default function EditorForm({ articleId, onClose }: EditorFormProps) {
         content: string;
         image: string;
         category: string;
+        price: number;
     } | null>(null);
 
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
     const [message, setMessage] = useState<string | null>(null);
     const [category, setCategory] = useState<string>('cong_nghe');
+    const [price, setPrice] = useState<number>(0);
 
     // Fetch the article data on component mount
     useEffect(() => {
@@ -63,6 +65,7 @@ export default function EditorForm({ articleId, onClose }: EditorFormProps) {
             content: formData.get('content') as string,
             image: formData.get('image') as string,
             category, // Use the state value directly
+            price: parseFloat(formData.get('price') as string) || 0, // Get price from form or default to 0
         };
         console.log("Sending payload:", updateArticle);
 
@@ -148,8 +151,8 @@ export default function EditorForm({ articleId, onClose }: EditorFormProps) {
                         </div>
                     </div>
 
-                    <span id="card-header">Phân loại:</span>
-                    <div className="row-1">
+                    <span id="card-header d-none">Phân loại:</span>
+                    <div className="row-1 d-none">
                         <div className="row row-2">
                             <select className="boxSelect" name="category" value={category} onChange={handleCategoryChange}>
                                 <option value="cong_nghe">Công nghệ</option>
@@ -164,6 +167,13 @@ export default function EditorForm({ articleId, onClose }: EditorFormProps) {
                                 <option value="am_nhac">Âm nhạc</option>
                                 <option value="meo_vat">Mẹo vặt</option>
                             </select>
+                        </div>
+                    </div>
+
+                    <span id="card-header">Giá tiền:</span>
+                    <div className="row-1">
+                        <div className="row row-2">
+                            <input type="number" name="price" defaultValue={article?.price} required />
                         </div>
                     </div>
                     <button type="submit" className="btn-form d-flex mx-auto">
