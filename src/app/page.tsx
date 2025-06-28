@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import Loading from "./loading";
 import Head from "next/head";
 import banner1 from '../assest/img/5.png';
+import '../app/(pages)/bai-viet-hay/style.css';
 
 type Article = {
   articleid: number,
