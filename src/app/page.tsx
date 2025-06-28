@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import Loading from "./loading";
 import Head from "next/head";
+import banner1 from '../assest/img/5.png';
 
 type Article = {
   articleid: number,
@@ -21,7 +22,7 @@ export default function Home() {
   const [totalPages, setTotalPages] = useState<number>(1);
 
   const images = [
-    "https://t4.ftcdn.net/jpg/08/11/15/37/360_F_811153701_7gPmVssUpwljTVrE7vlMDzfINZqQuJY6.jpg",
+    banner1,
     "https://images.samsung.com/is/image/samsung/assets/vn/2407/pcd/watches/PCD_WatchUltra_KV_1440x640_pc.jpg?imwidth=1366",
     "https://i.pinimg.com/736x/26/a6/bf/26a6bf5b167a360f2ef0dbed1f3773c0.jpg",];
 
@@ -88,15 +89,20 @@ export default function Home() {
       {/* SlideShow */}
       <div className="position-relative mb-4 rounded overflow-hidden">
         <div className="position-relative" style={{ height: '60vh' }}>
-          {images.map((src, index) => (
-            <img
-              key={index}
-              src={src}
-              alt={`Slide ${index + 1}`}
-              className={`position-absolute w-100 h-100 object-fit-cover transition-opacity ${index === currentIndex ? 'opacity-100' : 'opacity-0'}`}
-              style={{ borderRadius: '20px', transition: 'opacity 0.5s ease-in-out' }}
-            />
-          ))}
+          <div className="position-relative overflow-hidden" style={{ height: '60vh', borderRadius: '20px' }}>
+            {images.map((src, index) => (
+              <img
+                key={index}
+                src={typeof src === 'string' ? src : src.src}
+                alt={`Slide ${index + 1}`}
+                className={`position-absolute top-0 start-0 w-100 h-100 object-fit-cover transition-opacity`}
+                style={{
+                  opacity: index === currentIndex ? 1 : 0,
+                  transition: 'opacity 0.5s ease-in-out',
+                }}
+              />
+            ))}
+          </div>
         </div>
         <div className="position-absolute bottom-0 start-50 translate-middle-x d-flex mb-3">
           {images.map((_, index) => (
