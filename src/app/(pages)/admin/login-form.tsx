@@ -13,11 +13,7 @@ export default function Login() {
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        setErrorMessage(""); // Reset error message
-
-        // Encrypt the password and username
-        const encryptedPassword: string = CryptoJS.AES.encrypt(password, secretKey).toString();
-        const encryptedUsername: string = CryptoJS.AES.encrypt(username, secretKey).toString();
+        setErrorMessage(""); // Reset error messagesername: string = CryptoJS.AES.encrypt(username, secretKey).toString();
 
         try {
             const response = await fetch("/api/admin/login", {
@@ -26,7 +22,7 @@ export default function Login() {
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify({ username: encryptedUsername, password: encryptedPassword }), // Send the hashed password
+                body: JSON.stringify({ username: username, password: password }), // Send the hashed password
             });
 
             if (!response.ok) {

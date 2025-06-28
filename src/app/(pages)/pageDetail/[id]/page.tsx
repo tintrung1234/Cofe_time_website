@@ -21,7 +21,7 @@ const PageDetail = async ({ params }: { params: { id: string } }) => {
     let error: string | null = null;
 
     try {
-        const response = await fetch(`https://website-advertisement.vercel.app/api/pageDetail/${id}`, {
+        const response = await fetch(`https://cofetime-git-main-tin-trungs-projects-023d9102.vercel.app/api/pageDetail/${id}`, {
             method: 'GET',
             cache: 'force-cache',
         });
@@ -51,7 +51,7 @@ const PageDetail = async ({ params }: { params: { id: string } }) => {
                 <meta property="og:title" content={article.title} />
                 <meta property="og:description" content={article.summary} />
                 <meta property="og:image" content={article.image} />
-                <meta property="og:url" content={`https://website-advertisement.vercel.app/pageDetail/${article.articleid}`} />
+                <meta property="og:url" content={`https://cofetime-git-main-tin-trungs-projects-023d9102.vercel.app/pageDetail/${article.articleid}`} />
                 <meta name="twitter:title" content={article.title} />
                 <meta name="twitter:description" content={article.summary} />
                 <meta name="twitter:image" content={article.image} />

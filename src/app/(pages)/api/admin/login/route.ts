@@ -15,12 +15,6 @@ export async function POST(request: NextRequest) {
     try {
         const { username, password } = await request.json();
 
-        const encryptPassword = CryptoJS.AES.decrypt(password, secretKey);
-        const decryptedPassword = encryptPassword.toString(CryptoJS.enc.Utf8);
-
-        const encryptUsername = CryptoJS.AES.decrypt(username, secretKey);
-        const decryptedUsername = encryptUsername.toString(CryptoJS.enc.Utf8);
-
         if (!username || !password) {
             return NextResponse.json(
                 { message: "Missing required fields" },
@@ -31,7 +25,7 @@ export async function POST(request: NextRequest) {
         const query = `
             SELECT password FROM users WHERE username = $1
         `;
-        const result = await pool.query(query, [decryptedUsername]);
+        const result = await pool.query(query, [username]);
 
         if (result.rowCount === 0) {
             return NextResponse.json(
@@ -41,9 +35,9 @@ export async function POST(request: NextRequest) {
         }
 
         const user = result.rows[0];
-        const isPasswordValid = await bcrypt.compare(decryptedPassword, user.password);
+        const isPasswordValid = password === user.password;
 
-        console.log(decryptedPassword)
+        console.log(password)
         console.log(user.password);
         console.log(isPasswordValid)
 
