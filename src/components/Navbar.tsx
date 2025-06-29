@@ -30,10 +30,10 @@ export default async function Header() {
                                     <span className="visually-hidden">(current)</span>
                                 </a>
                             </li>
-                            <li className="nav-item underline">
+                            <li className="nav-item underline d-none">
                                 <a className="nav-link" href="/bai-viet-hay">BÀI VIẾT HAY</a>
                             </li>
-                            <li className="nav-item dropdown dropdown-parent sub-menu-parent">
+                            <li className="nav-item dropdown dropdown-parent sub-menu-parent d-none">
                                 <button className="btn dropdown-toggle categoryBtn" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     DANH MỤC
                                 </button>
