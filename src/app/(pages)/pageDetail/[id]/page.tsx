@@ -21,7 +21,7 @@ const PageDetail = async ({ params }: { params: { id: string } }) => {
     let error: string | null = null;
 
     try {
-        const response = await fetch(`https://cofetime-git-main-tin-trungs-projects-023d9102.vercel.app/api/pageDetail/${id}`, {
+        const response = await fetch(`https://elaria.vercel.app/api/pageDetail/${id}`, {
             method: 'GET',
             cache: 'force-cache',
         });
