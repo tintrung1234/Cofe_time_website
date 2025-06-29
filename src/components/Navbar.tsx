@@ -30,7 +30,7 @@ export default async function Header() {
                                     <span className="visually-hidden">(current)</span>
                                 </a>
                             </li>
-                            <li className="nav-item underline d-none">
+                            <li className="nav-item underline">
                                 <a className="nav-link" href="/bai-viet-hay">BÀI VIẾT HAY</a>
                             </li>
                             <li className="nav-item dropdown dropdown-parent sub-menu-parent d-none">
