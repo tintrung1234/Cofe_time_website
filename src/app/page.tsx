@@ -24,8 +24,8 @@ export default function Home() {
 
   const images = [
     banner1,
-    "https://images.samsung.com/is/image/samsung/assets/vn/2407/pcd/watches/PCD_WatchUltra_KV_1440x640_pc.jpg?imwidth=1366",
-    "https://i.pinimg.com/736x/26/a6/bf/26a6bf5b167a360f2ef0dbed1f3773c0.jpg",];
+    banner1,
+    banner1,];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -116,20 +116,6 @@ export default function Home() {
             />
           ))}
         </div>
-      </div>
-
-      {/* Slogan */}
-      <div className="text-start mb-4">
-        <h1 className="fw-bold display-5">
-          <span className="text-danger">Best</span> Deals,
-        </h1>
-        <h1 className="fw-bold display-5">
-          <span className="text-muted">Zero</span> Stress
-        </h1>
-        <p className="fw-semibold text-dark mt-2">
-          Bạn chỉ cần mua sắm – việc tìm deal đã có chúng tôi lo
-        </p>
-        <hr className="w-50" />
       </div>
 
       {/* Article Grid */}
