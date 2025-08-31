@@ -11,7 +11,7 @@ export default async function Header() {
     return (
         <nav className="navbar navbar-expand-sm navbar-light w-100">
             <div className="container d-flex justify-content-aground w-90 ">
-                <Link href="/" className="nav-name-link me-auto navbar-brand text text-center ml-3 pe-auto" >ELARIA</Link>
+                <Link href="/" className="nav-name-link me-auto navbar-brand text text-center ml-3 pe-auto" >NEWS WEBSITE</Link>
                 <button
                     id='navbar-toggle'
                     className="navbar-toggler d-lg-none"
@@ -33,7 +33,7 @@ export default async function Header() {
                             <li className="nav-item underline">
                                 <a className="nav-link" href="/bai-viet-hay">BÀI VIẾT HAY</a>
                             </li>
-                            <li className="nav-item dropdown dropdown-parent sub-menu-parent d-none">
+                            <li className="nav-item dropdown dropdown-parent sub-menu-parent">
                                 <button className="btn dropdown-toggle categoryBtn" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     DANH MỤC
                                 </button>
