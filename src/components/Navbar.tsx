@@ -11,7 +11,7 @@ export default async function Header() {
     return (
         <nav className="navbar navbar-expand-sm navbar-light w-100">
             <div className="container d-flex justify-content-aground w-90 ">
-                <Link href="/" className="nav-name-link me-auto navbar-brand text text-center ml-3 pe-auto" >NEWS WEBSITE</Link>
+                <Link href="/" className="nav-name-link me-auto navbar-brand text text-center ml-3 pe-auto" >COFE TIME</Link>
                 <button
                     id='navbar-toggle'
                     className="navbar-toggler d-lg-none"
