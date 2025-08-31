@@ -105,7 +105,7 @@ export default function Page({ params }: PageProps) {
                 <meta property="og:title" content='Danh mục tin' />
                 <meta property="og:description" content='Danh mục tin' />
                 <meta property="og:image" content='https://seoviet.vn/wp-content/uploads/2022/04/cach-tao-Category.jpg' />
-                <meta property="og:url" content={`https://website-advertisement.vercel.app/category`} />
+                <meta property="og:url" content={`https://cofetime.vercel.app/category`} />
             </Head>
 
             <h2 className='category-title'>{categoryName || 'Không có danh mục'}</h2>
